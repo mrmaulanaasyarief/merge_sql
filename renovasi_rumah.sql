@@ -110,12 +110,22 @@ INSERT INTO `jasa_desain` (`id_jasa_desain`, `jenis_jasa_desain`, `tipe_desain`)
 --
 
 CREATE TABLE `material` (
-  `id_material` varchar(15) NOT NULL,
-  `nama_material` varchar(100) NOT NULL,
+  `id_material` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `jenis_material` varchar(100) NOT NULL,
   `satuan` varchar(100) NOT NULL,
-  `spesifikasi` varchar(100) NOT NULL
+  `harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `material`
+--
+
+INSERT INTO `material` (`id_material`, `nama`, `jenis_material`, `satuan`, `harga`) VALUES
+(1, 'Semen', 'Bahan', 'Kg', 500000),
+(5, 'Obeng', 'Alat', 'cm', 35000),
+(6, 'pasir', 'Bahan', 'Kg', 300000),
+(8, 'Batu bata', 'Bahan', 'Kg', 1000000);
 
 -- --------------------------------------------------------
 
@@ -341,6 +351,12 @@ ALTER TABLE `transaksi_supplier`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `material`
+--
+ALTER TABLE `material`
+  MODIFY `id_material` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `customer`
