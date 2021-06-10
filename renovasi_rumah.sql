@@ -324,9 +324,8 @@ ALTER TABLE `transaksi_material`
 --
 -- Indexes for table `transaksi_pegawai`
 --
-ALTER TABLE `transaksi_pegawai`
-  ADD PRIMARY KEY (`id_trans_pegawai`),
-  ADD KEY `fk_trans_pegawai` (`id_pegawai`);
+ALTER TABLE `pegawai`
+  MODIFY `id_pegawai` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Indexes for table `transaksi_supplier`
