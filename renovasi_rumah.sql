@@ -270,7 +270,6 @@ ALTER TABLE `akun`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`id_customer`);
-  MODIFY `id_customer` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Indexes for table `detail_trans_supplier`
@@ -342,6 +341,12 @@ ALTER TABLE `transaksi_supplier`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id_customer` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `jasa_desain`
