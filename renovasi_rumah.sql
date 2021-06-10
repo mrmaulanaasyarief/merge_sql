@@ -119,10 +119,10 @@ CREATE TABLE `material` (
 --
 
 CREATE TABLE `pegawai` (
-  `id_pegawai` varchar(15) NOT NULL,
+  `id_pegawai` int(15) NOT NULL,
   `nama_pegawai` varchar(100) NOT NULL,
   `alamat_pegawai` varchar(100) NOT NULL,
-  `telp_pegawai` int(11) NOT NULL,
+  `telp_pegawai` varchar(13) NOT NULL,
   `jenis_pegawai` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
