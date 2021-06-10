@@ -201,25 +201,28 @@ INSERT INTO `pemesanan` (`id_pesan`, `id_jasa_desain`, `tgl_pesan`, `status_baya
 --
 
 CREATE TABLE `supplier` (
-  `id_supplier` varchar(15) NOT NULL,
+  `id_supplier` int(15) NOT NULL,
   `nama_supplier` varchar(100) NOT NULL,
   `alamat_supplier` varchar(100) NOT NULL,
   `telepon_supplier` varchar(13) NOT NULL,
-  `jenis_material` varchar(15) DEFAULT NULL
+  `jenis_material` varchar(100) NOT NULL,
+  `harga_material` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `transaksi_customer`
+-- Dumping data for table `supplier`
 --
 
-CREATE TABLE `transaksi_customer` (
-  `id_trans_customer` varchar(15) NOT NULL,
-  `id_customer` varchar(15) NOT NULL,
-  `jenis_renovasi` varchar(100) NOT NULL,
-  `total_renovasi` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `supplier` (`id_supplier`, `nama_supplier`, `alamat_supplier`, `telepon_supplier`, `jenis_material`, `harga_material`) VALUES
+(7, 'Syafia', 'Ciracas', '081221065578', 'Batu granit', 0),
+(8, 'Alyssa', 'Pabuaran', '08122106954', 'Keramik marbel', 0),
+(9, 'Regina', 'Serang', '081221076646', 'cat', 0),
+(10, 'Biyan', 'Ciceri', '081221076644', 'besi', 0),
+(11, 'Doni', 'jakarta', '081221076645', 'baja', 0),
+(12, 'Davin', 'Lontar', '081221067734', 'Kayu Jati', 0),
+(13, 'Rege', 'Sukabirus', '082116574423', 'Kawat', 0),
+(14, 'Jihan', 'Batam', '089441675529', 'Rumput', 0),
+(16, 'getty', 'subang', '081221076646', 'cat tembok', 500000);
 
 -- --------------------------------------------------------
 
@@ -337,12 +340,6 @@ ALTER TABLE `transaksi_material`
   ADD PRIMARY KEY (`id_trans_material`);
 
 --
--- Indexes for table `transaksi_pegawai`
---
-ALTER TABLE `pegawai`
-  MODIFY `id_pegawai` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
 -- Indexes for table `transaksi_supplier`
 --
 ALTER TABLE `transaksi_supplier`
@@ -377,11 +374,23 @@ ALTER TABLE `pembayaran_jasa_desain`
   MODIFY `id_pembayaran_jasa` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- Indexes for table `transaksi_pegawai`
+--
+ALTER TABLE `pegawai`
+  MODIFY `id_pegawai` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
   MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 COMMIT;
+
+--
+-- AUTO_INCREMENT for table `supplier`
+--
+ALTER TABLE `supplier`
+  MODIFY `id_supplier` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
