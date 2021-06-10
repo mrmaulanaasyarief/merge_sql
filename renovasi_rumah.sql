@@ -126,6 +126,19 @@ CREATE TABLE `pegawai` (
   `jenis_pegawai` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `pegawai`
+--
+
+INSERT INTO `pegawai` (`id_pegawai`, `nama_pegawai`, `alamat_pegawai`, `telp_pegawai`, `jenis_pegawai`) VALUES
+(10, 'amelia getty', 'bandung', '08211706368', 'tukang cat'),
+(11, 'ingka novita', 'jakarta', '08211706321', 'tukang keramik'),
+(13, 'regina', 'serang', '082117063456', 'tukang las'),
+(14, 'dara', 'Bali', '08211706366', 'tukang cat'),
+(15, 'vanya', 'Bandung', '082117063457', 'mandor'),
+(16, 'Mince', 'Semarang', '082117064567', 'tukang semen'),
+(17, 'Desta', 'Depok', '081224411447', 'mandor');
+
 -- --------------------------------------------------------
 
 --
