@@ -47,7 +47,7 @@ INSERT INTO `akun` (`username`, `pwd`, `last_login`) VALUES
 --
 
 CREATE TABLE `customer` (
-  `id_customer` varchar(15) NOT NULL,
+  `id_customer` int(100) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `alamat` varchar(100) NOT NULL,
   `no_hp` varchar(13) NOT NULL
@@ -58,8 +58,13 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id_customer`, `nama`, `alamat`, `no_hp`) VALUES
-('', 'ujang', 'jakarta', '0555646464'),
-('001', 'krisna', 'bandung', '89697113656');
+(1, 'krisna', 'bandung', '89697113656'),
+(2, 'asep', 'sukabumi', '0555646464'),
+(3, 'ujang', 'surabaya', '6468986'),
+(5, 'julio', 'lembang', '65849661'),
+(6, 'ananda', 'sukabumi', '2899'),
+(7, 'genus', 'surabaya', '0555646464656'),
+(9, 'hani', 'tangerang', '08936556');
 
 -- --------------------------------------------------------
 
@@ -265,6 +270,7 @@ ALTER TABLE `akun`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`id_customer`);
+  MODIFY `id_customer` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Indexes for table `detail_trans_supplier`
