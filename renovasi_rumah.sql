@@ -197,6 +197,48 @@ INSERT INTO `pemesanan_jasa_desain` (`id_pesan`, `id_jasa_desain`, `tgl_pesan`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pemesanan_material`
+--
+
+CREATE TABLE `pemesanan_material` (
+  `id_pesan` int(11) NOT NULL,
+  `id_material` int(11) NOT NULL,
+  `tanggal_pesan` date NOT NULL,
+  `tanggal_ambil` date NOT NULL,
+  `status_bayar` varchar(100) NOT NULL,
+  `total_trans` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pemesanan_material`
+--
+
+INSERT INTO `pemesanan_material` (`id_pesan`, `id_material`, `tanggal_pesan`, `tanggal_ambil`, `status_bayar`, `total_trans`) VALUES
+(11, 1, '2021-04-19', '2021-04-26', 'Lunas', 450000),
+(12, 5, '2021-04-19', '2021-04-26', 'Lunas', 30000),
+(13, 5, '2021-04-19', '2021-04-26', 'Lunas', 30000),
+(14, 6, '2021-04-12', '2021-04-19', 'Belum Lunas', 250000),
+(15, 6, '2021-04-12', '2021-04-19', 'Belum Lunas', 250000),
+(16, 8, '2021-04-19', '2021-04-12', 'Lunas', 900000),
+(17, 8, '2021-04-19', '2021-04-12', 'Lunas', 900000),
+(18, 5, '2021-04-19', '2021-04-26', 'Lunas', 30000),
+(19, 5, '2021-04-19', '2021-04-26', 'Lunas', 30000),
+(20, 5, '2021-04-19', '2021-04-26', 'Lunas', 30000),
+(21, 5, '2021-04-19', '2021-04-26', 'Lunas', 30000),
+(22, 1, '2021-04-19', '2021-04-19', 'Lunas', 500000),
+(23, 1, '2021-04-19', '2021-04-26', 'Lunas', 450000),
+(24, 6, '2021-04-19', '2021-04-26', 'Lunas', 250000),
+(25, 1, '2021-04-13', '2021-04-26', 'Lunas', 450000),
+(26, 1, '2021-04-19', '2021-04-26', 'Lunas', 400000),
+(27, 6, '2021-04-13', '2021-04-13', 'Lunas', 250000),
+(28, 1, '2021-04-13', '2021-04-20', 'Lunas', 400000),
+(29, 5, '2021-04-13', '2021-04-20', 'Lunas', 30000),
+(30, 8, '2021-04-03', '2021-04-10', 'Lunas', 900000),
+(31, 1, '2021-04-17', '2021-04-21', 'Lunas', 450000);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `supplier`
 --
 
@@ -321,6 +363,12 @@ ALTER TABLE `pemesanan_jasa_desain`
   ADD PRIMARY KEY (`id_pesan`);
 
 --
+-- Indexes for table `pemesanan_material`
+--
+ALTER TABLE `pemesanan_material`
+  ADD PRIMARY KEY (`id_pesan`);
+
+--
 -- Indexes for table `supplier`
 --
 ALTER TABLE `supplier`
@@ -385,6 +433,12 @@ ALTER TABLE `pegawai`
 ALTER TABLE `pemesanan_jasa_desain`
   MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 COMMIT;
+
+--
+-- AUTO_INCREMENT for table `pemesanan_material`
+--
+ALTER TABLE `pemesanan_material`
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `supplier`
