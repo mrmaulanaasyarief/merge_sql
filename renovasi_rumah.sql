@@ -171,10 +171,10 @@ CREATE TABLE `pembayaran_jasa_desain` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pemesanan`
+-- Table structure for table `pemesanan_jasa_desain`
 --
 
-CREATE TABLE `pemesanan` (
+CREATE TABLE `pemesanan_jasa_desain` (
   `id_pesan` int(11) NOT NULL,
   `id_jasa_desain` int(11) NOT NULL,
   `tgl_pesan` date NOT NULL,
@@ -185,10 +185,10 @@ CREATE TABLE `pemesanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pemesanan`
+-- Dumping data for table `pemesanan_jasa_desain`
 --
 
-INSERT INTO `pemesanan` (`id_pesan`, `id_jasa_desain`, `tgl_pesan`, `status_bayar`, `harga_deal`, `tgl_desain`, `status_desain`) VALUES
+INSERT INTO `pemesanan_jasa_desain` (`id_pesan`, `id_jasa_desain`, `tgl_pesan`, `status_bayar`, `harga_deal`, `tgl_desain`, `status_desain`) VALUES
 (34, 8, '2021-05-30', 'Belum Lunas', 25000, '2021-05-31', ''),
 (35, 9, '2021-05-09', 'Lunas', 100000, '2021-05-10', ''),
 (36, 12, '2021-06-07', 'Belum Lunas', 150000, '2021-06-08', ''),
@@ -315,9 +315,9 @@ ALTER TABLE `pembayaran_jasa_desain`
   ADD PRIMARY KEY (`id_pembayaran_jasa`);
 
 --
--- Indexes for table `pemesanan`
+-- Indexes for table `pemesanan_jasa_desain`
 --
-ALTER TABLE `pemesanan`
+ALTER TABLE `pemesanan_jasa_desain`
   ADD PRIMARY KEY (`id_pesan`);
 
 --
@@ -382,7 +382,7 @@ ALTER TABLE `pegawai`
 --
 -- AUTO_INCREMENT for table `pemesanan`
 --
-ALTER TABLE `pemesanan`
+ALTER TABLE `pemesanan_jasa_desain`
   MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 COMMIT;
 
