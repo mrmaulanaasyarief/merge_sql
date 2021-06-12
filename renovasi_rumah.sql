@@ -239,6 +239,29 @@ INSERT INTO `pemesanan_material` (`id_pesan`, `id_material`, `tanggal_pesan`, `t
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `pemesanan_pegawai`
+--
+
+CREATE TABLE `pemesanan_pegawai` (
+  `id_pesan` int(15) NOT NULL,
+  `id_pegawai` int(15) DEFAULT NULL,
+  `tanggal_pesan` date NOT NULL,
+  `tanggal_kerja` date NOT NULL,
+  `jumlah_hari` int(11) NOT NULL,
+  `gaji` int(11) NOT NULL,
+  `total_gaji` int(11) NOT NULL,
+  `total_bayar` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `penggajian_pegawai`
+--
+
+INSERT INTO `pemesanan_pegawai` (`id_pesan`, `id_pegawai`, `tanggal_pesan`, `tanggal_kerja`, `jumlah_hari`, `gaji`, `total_gaji`, `total_bayar`) VALUES
+(31, 10, '2021-04-20', '2021-04-20', 30, 100000, 3000000, 0),
+(32, 10, '2021-04-20', '2021-04-20', 30, 100000, 3000000, 0);
+
+--
 -- Table structure for table `supplier`
 --
 
@@ -369,6 +392,13 @@ ALTER TABLE `pemesanan_material`
   ADD PRIMARY KEY (`id_pesan`);
 
 --
+-- Indexes for table `pemesanan_pegawai`
+--
+ALTER TABLE `pemesanan_pegawai`
+  ADD PRIMARY KEY (`id_pesan`),
+  ADD KEY `fk_trans_pegawai` (`id_pegawai`);
+
+--
 -- Indexes for table `supplier`
 --
 ALTER TABLE `supplier`
@@ -439,6 +469,12 @@ COMMIT;
 --
 ALTER TABLE `pemesanan_material`
   MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT untuk tabel `pemesanan_pegawai`
+--
+ALTER TABLE `pemesanan_pegawai`
+  MODIFY `id_pesan` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `supplier`
